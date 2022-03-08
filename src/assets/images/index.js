@@ -42,6 +42,10 @@ import IMGHanjipyeong from './img-hanjipyeong.png';
 import IMGProfileDummy from './img-profiledummy.png';
 import IMGGramediaFeed from './img-gramedia-feed.png';
 import IMGGramediaFollowing from './img-gramedia-following.png';
+import IMGKaosChicago from './img-kaos-chicago-bulls.png';
+import IMGLaptopROG from './img-laptop-rog.png';
+import IMGNikeAir from './img-nike-air-versitile-II.png';
+import IMGSupremeCashGun from './img-supreme-cash-gun.png';
 
 export {
   IMGGramediaFeed,
@@ -88,4 +92,8 @@ export {
   IMGProfilePicture,
   IMGKeyboard,
   IMGShopLogo,
+  IMGKaosChicago,
+  IMGLaptopROG,
+  IMGNikeAir,
+  IMGSupremeCashGun
 };

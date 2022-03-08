@@ -3,22 +3,24 @@ import {StyleSheet, Text, TextInput, View} from 'react-native';
 import {colors, fonts, IconSearch} from '../../assets';
 import {Button, Gap, SearchBar} from '../../components';
 import TokoPage from './TokoPage';
+import Produk from './Produk';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import TopTab from '../../components/molecules/TopTab';
+import { useRoute } from '@react-navigation/native';
 
 const Tab = createMaterialTopTabNavigator();
 
-const Produk = () => {
-  return <Text>produk</Text>;
-};
 const Mall = () => {
   return <Text>mall</Text>;
 };
 
 const Shop = ({navigation}) => {
+  
+  const route = useRoute();
+  
   return (
     <View style={styles.page}>
-      <TopTab title="Toko" onBack={() => navigation.goBack()} />
+      <TopTab title={route.name}cd onBack={() => navigation.goBack()} />
       <View style={styles.container}>
         <Text style={styles.questionText}>Mau cari apa hari ini?</Text>
         <Gap height={24} />
@@ -49,7 +51,7 @@ const Shop = ({navigation}) => {
               borderRadius: 8,
             },
           }}>
-          <Tab.Screen name="Toko" component={TokoPage} />
+          <Tab.Screen name="Toko" component={TokoPage}/>
           <Tab.Screen name="Produk" component={Produk} />
           <Tab.Screen name="Mall" component={Mall} />
         </Tab.Navigator>
