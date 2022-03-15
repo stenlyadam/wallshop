@@ -22,14 +22,13 @@ const SearchBar = ({type, width = 300}) => {
   } else {
     return (
       <View style={styles.searchContainer}>
-        <View style={styles.searchBoxContainer(width)}>
+        <View style={styles.searchBox}>
           <Button type="icon-only" icon="icon-search" />
           <TextInput
             style={styles.searchBoxTextContainer}
             placeholder="Cari produk, iklan atau toko..."
           />
         </View>
-        <Button type="icon-only" icon="icon-cart" />
       </View>
     );
   }
@@ -57,4 +56,16 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 10,
   },
+  searchBox: {
+    backgroundColor: 'white',
+    flex: 1,
+    height: 42,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 2,
+    borderRadius: 25,
+    borderColor: 'grey',
+    paddingHorizontal: 22,
+  }
 });
