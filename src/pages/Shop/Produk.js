@@ -3,12 +3,12 @@ import {
   FlatList,
   StyleSheet,
   View,
+  Text
 } from 'react-native';
 import {
   colors
 } from '../../assets';
-import { Card } from '../../components';
-import Router from '../../router';
+import { Card, Gap, SearchBar } from '../../components';
 
 const DATA = [
   {
@@ -88,6 +88,14 @@ const Produk = ({title, navigation}) => {
   );
   return (
     <View style={styles.page}>
+      <View style={{paddingHorizontal: 20}} >
+        <Text style={styles.textStyle} >
+          Ayo eksplorasi
+        </Text>
+        <Gap height={10}/>
+        <SearchBar />
+        <Gap height={20}/>
+      </View>
       <FlatList
         columnWrapperStyle={{justifyContent: 'space-between', flex: 0.5}}
         data={DATA}
@@ -107,5 +115,12 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     backgroundColor: colors.white
     // paddingHorizontal: 5
+  },
+  textStyle: {
+    fontFamily: 'poppins',
+    fontWeight: '500',
+    fontSize: 24,
+    lineHeight: 36,
+    paddingLeft: 10
   }
 });
