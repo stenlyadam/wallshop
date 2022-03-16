@@ -1,7 +1,7 @@
 import React from 'react';
 import {useRoute} from '@react-navigation/native';
 import {StyleSheet, View, Text, TextInput} from 'react-native';
-import {fonts} from '../../../assets';
+import {colors, fonts} from '../../../assets';
 import {Button} from '../..';
 
 const FormInput = ({
@@ -64,6 +64,7 @@ const FormInput = ({
           placeholder={placeholder}
           secureTextEntry={password}
           style={styles.textInput(prop)}
+          placeholderTextColor="#C7C7CD"
         />
         {button}
       </View>
@@ -91,6 +92,7 @@ const styles = StyleSheet.create({
     width: prop.textWidth,
     fontSize: prop.fontSize,
     paddingStart: prop.paddingStart,
+    color: 'black'
   }),
   label: prop => ({
     fontWeight: prop.fontWeight,

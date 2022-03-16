@@ -13,6 +13,7 @@ const SearchBar = ({type, width = 300}) => {
           <TextInput
             style={styles.searchBoxTextContainer}
             placeholder="Cari produk, iklan atau toko..."
+            placeholderTextColor="#C7C7CD"
           />
           <IconWorld />
         </View>
@@ -27,6 +28,7 @@ const SearchBar = ({type, width = 300}) => {
           <TextInput
             style={styles.searchBoxTextContainer}
             placeholder="Cari produk, iklan atau toko..."
+            placeholderTextColor="#C7C7CD"
           />
         </View>
       </View>
@@ -62,7 +64,6 @@ const styles = StyleSheet.create({
     height: 42,
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center',
     borderWidth: 2,
     borderRadius: 25,
     borderColor: 'grey',
