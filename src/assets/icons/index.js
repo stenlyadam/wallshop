@@ -41,6 +41,7 @@ import IconCompleted from './ic-completed';
 import IconLoveSmall from './ic-love-small.svg';
 import IconStarBig from './ic-star-big.svg';
 import IconThreeDots from './ic-three-dots.svg';
+import IconSmallClock from './ic-clock-small.svg';
 
 export {
   IconThreeDots,
@@ -86,4 +87,5 @@ export {
   IconStar,
   IconPinSmall,
   IconArrowBack,
+  IconSmallClock,
 };

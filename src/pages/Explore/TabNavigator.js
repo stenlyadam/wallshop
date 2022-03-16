@@ -1,41 +1,48 @@
-import React from 'react';
-import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
-import {colors, fonts} from '../../assets';
-import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import Regional from './Regional';
-import Lokal from './Lokal';
+import React from "react";
+import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
+import { colors, fonts } from "../../assets";
+import TokoPage from "../Shop/TokoPage";
+import Produk from "../Shop/Produk";
+import Mall from "../Mall/index";
+
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
 const Tab = createMaterialTopTabNavigator();
 
-const TabNavigator = ({navigation}) => {
+const TabNavigator = ({ navigation }) => {
   return (
     <View style={styles.tabNavigatorContainer}>
       <Tab.Navigator
         tabBarOptions={{
           labelStyle: {
+            color: 'black',
             fontSize: 15,
             fontFamily: fonts.Roboto.medium,
-            textTransform: 'capitalize',
+            textTransform: "capitalize",
           },
-          style: {
-            backgroundColor: colors.lightGrey,
-            borderRadius: 10,
-            elevation: 0,
-            marginHorizontal: 20,
-          },
-          activeTintColor: colors.red,
           indicatorStyle: {
             backgroundColor: colors.red,
             height: 3,
             borderRadius: 8,
-          },
-        }}>
+          }
+        }}
+      >
         <Tab.Screen
-          name="Regional"
-          component={Regional}
+          name="Toko"
+          component={TokoPage} 
+          navigation={navigation}
+          style={{paddingHorizontal: 15}}
+        />
+        <Tab.Screen
+          name="Produk"
+          component={Produk}
           navigation={navigation}
         />
-        <Tab.Screen name="Lokal" component={Lokal} navigation={navigation} />
+        <Tab.Screen
+          name="Mall"
+          component={Mall}
+          navigation={navigation}
+        />
       </Tab.Navigator>
     </View>
   );
@@ -45,7 +52,7 @@ export default TabNavigator;
 
 const styles = StyleSheet.create({
   tabNavigatorContainer: {
-    height: 323,
-    // paddingHorizontal: 20,
+    height: '100%',
+    paddingBottom: 150
   },
 });

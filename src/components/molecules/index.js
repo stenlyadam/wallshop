@@ -2,6 +2,6 @@ import FormInput from './FormInput';
 import Carousel from './Carousel';
 import SearchBar from './SearchBar';
 import RoundButton from './RoundButton';
-import SignupForm from './SignUpForm';
+import Card from './Card';
 
-export {FormInput, Carousel, SearchBar, RoundButton, SignupForm};
+export {FormInput, Carousel, SearchBar, RoundButton, Card};

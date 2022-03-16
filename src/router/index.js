@@ -9,7 +9,6 @@ import {
   Notification,
   Account,
   Product,
-  Shop,
   Leaderboard,
 } from '../pages';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -121,11 +120,6 @@ const Router = () => {
       <Stack.Screen
         name="Product"
         component={Product}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="Shop"
-        component={Shop}
         options={{headerShown: false}}
       />
       <Stack.Screen

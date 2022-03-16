@@ -3,22 +3,12 @@ import {
   FlatList,
   StyleSheet,
   Text,
-  TextInput,
-  TouchableOpacity,
   View,
 } from 'react-native';
 import {
   colors,
-  fonts,
-  IconSearch,
-  IMGAceHardware,
-  IMGGramedia,
-  IMG3Second,
-  IMGMaskutSport,
-  IMGMiensSouvenirTikala,
-  IMGSportStation,
 } from '../../assets';
-import {Button, Gap, SearchBar} from '../../components';
+import { Gap, SearchBar } from '../../components';
 import Toko from './Toko';
 
 const DATA = [
@@ -93,6 +83,14 @@ const TokoPage = ({onPress, navigation}) => {
   );
   return (
     <View style={styles.page}>
+      <View style={{paddingHorizontal: 20}} >
+        <Text style={styles.textStyle} >
+          Ayo eksplorasi
+        </Text>
+        <Gap height={10}/>
+        <SearchBar />
+        <Gap height={20}/>
+      </View>
       <FlatList
         data={DATA}
         renderItem={renderItem}
@@ -105,12 +103,12 @@ const TokoPage = ({onPress, navigation}) => {
 export default TokoPage;
 
 const styles = StyleSheet.create({
-  TokoContainer: {
-    backgroundColor: colors.white,
-    width: '100%',
-    height: 80,
-    borderRadius: 8,
-    elevation: 5,
+  textStyle: {
+    fontFamily: 'poppins',
+    fontWeight: '500',
+    fontSize: 24,
+    lineHeight: 36,
+    paddingLeft: 10
   },
   page: {
     backgroundColor: colors.white,
