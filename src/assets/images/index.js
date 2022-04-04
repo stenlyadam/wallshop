@@ -46,8 +46,10 @@ import IMGKaosChicago from './img-kaos-chicago-bulls.png';
 import IMGLaptopROG from './img-laptop-rog.png';
 import IMGNikeAir from './img-nike-air-versitile-II.png';
 import IMGSupremeCashGun from './img-supreme-cash-gun.png';
+import IMGMantos from './img-mantos.png';
 
 export {
+  IMGMantos,
   IMGGramediaFeed,
   IMGGramediaFollowing,
   IMGProfileDummy,
