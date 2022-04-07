@@ -22,6 +22,7 @@ import {
   IconNotification,
 } from '../assets';
 import ShopDetail from '../pages/Shop/ShopDetail';
+import mallDetail from '../pages/Mall/mallDetail';
 
 const Tab = createBottomTabNavigator();
 
@@ -145,6 +146,11 @@ const Router = () => {
       <Stack.Screen
         name="Signup"
         component={Signup}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="mallDetail"
+        component={mallDetail}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
