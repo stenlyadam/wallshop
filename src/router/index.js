@@ -104,11 +104,6 @@ const Router = () => {
   return (
     <Stack.Navigator initialRouteName="BottomNavigator">
       <Stack.Screen
-        name="Explore"
-        component={Explore}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
         name="Login"
         component={Login}
         options={{headerShown: false}}
@@ -121,6 +116,11 @@ const Router = () => {
       <Stack.Screen
         name="DashboardPage"
         component={Dashboard}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Explore"
+        component={Explore}
         options={{headerShown: false}}
       />
       <Stack.Screen
