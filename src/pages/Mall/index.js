@@ -13,7 +13,11 @@ const MallPage = ({ navigation }) => {
       time={item.time}
       range={item.range}
       image={item.image}
-      onPress={() => navigation.navigate("mallDetail")}
+      onPress={() =>
+        navigation.navigate("mallDetail", {
+          item: item
+        })
+      }
     />
   );
   return (

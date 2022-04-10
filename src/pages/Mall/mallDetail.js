@@ -9,7 +9,7 @@ import {
   Dimensions
 } from 'react-native';
 import { fonts, colors } from '../../assets';
-import {SearchBar, RoundButton, Gap, Button} from '../../components';
+import {SearchBar, Gap, Button} from '../../components';
 import dummyData from '../Shop/dummyData';
 import Toko from '../Shop/Toko';
 
@@ -45,33 +45,36 @@ const Item = () => {
 const image= require("../../assets/images/img-mantos.png");
 const height= Dimensions.get('window').height;
 
-const mallDetail = ({navigation}) => {
+const mallDetail = ({ 
+  route,
+  navigation,
+  selectedValue, 
+  setSelectedValue 
+}) => {
+  const {item} = route.params;
   return (
-    <View style={styles.page} nestedScrollEnabled={true}>
-      <ScrollView style={styles.container}>
-      <View>
-        <ImageBackground
-          source={image}
-          style={{ height: height * 0.45 }}
+    <ScrollView style={styles.page} nestedScrollEnabled={true}>
+      <ImageBackground source={image} style={{ height: height * 0.45 }} >
+        <View style={styles.imageContainer}>
+        <Button
+          type="icon-only"
+          icon="icon-arrow-back"
+          onPress={() => navigation.goBack()}
         />
-      </View>
-        <Gap height={50} />
-        {/* <View> */}
+        <Text style={styles.title}> {item.name} </Text>
+        </View>
+      </ImageBackground>
+      <View style={styles.container}>
+        <Gap height={30} />
         <View
-          style={{
-            width: "85%",
-            borderRadius: 25,
-            borderColor: "#ACACAC",
-            borderWidth: 2,
-            alignSelf: "center",
-          }}
+          style={styles.pickerContainer}
         >
           <Picker
             mode={"dropdown"}
-            // selectedValue={selectedValue}
-            style={{ color: "black" }}
+            selectedValue={selectedValue}
+            style={{ color: "black", paddingHorizontal: 20 }}
             onValueChange={(itemValue, itemIndex) =>
-              setSelectedValue(itemValue)
+              setSelectedValue=itemValue
             }
           >
             <Picker.Item label="Lantai 1" value="lantai 1" />
@@ -83,7 +86,7 @@ const mallDetail = ({navigation}) => {
             tabBarOptions={{
               labelStyle: {
                 color: "black",
-                fontSize: 15,
+                fontSize: 18,
                 fontFamily: fonts.Roboto.medium,
                 textTransform: "capitalize",
               },
@@ -98,14 +101,12 @@ const mallDetail = ({navigation}) => {
               name="Toko"
               component={mallToko}
               navigation={navigation}
-              style={{ paddingHorizontal: 15 }}
             />
             <Tab.Screen name="Item" component={Item} navigation={navigation} />
           </Tab.Navigator>
         </View>
+      </View>
       </ScrollView>
-      {/* </View> */}
-    </View>
   );
 }
 
@@ -114,16 +115,40 @@ export default mallDetail;
 const styles = StyleSheet.create({
   page: {
     flex: 1,
-    // marginTop: -45
   },
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    marginTop: -30,
+    marginTop: "-8%",
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
-    alignContent: 'center'
+    alignContent: "center",
   },
-  topTabStyle: {
+  imageContainer: {
+    flex: 1,
+    paddingHorizontal: '6%',
+    paddingTop: '2%',
+    paddingBottom: '12%',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between'
+  },
+  pickerContainer: {
+    width: "85%",
+    borderRadius: 25,
+    borderColor: "#ACACAC",
+    borderWidth: 2,
+    alignSelf: "center",
+  },
+  title: {
+    color: 'white',
+    width: '100%',
+    fontWeight: '700',
+    fontSize: 32,
+    textShadowColor: 'black',
+    textShadowRadius: 3,
+    textShadowOffset: {
+      width: -1,
+      height: 2
+    }
   }
-})
+});
