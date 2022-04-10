@@ -1,4 +1,4 @@
-const dummyData = [
+const dataToko = [
     {
       id: 1,
       name: 'Ace Hardware Mantos',
@@ -57,4 +57,4 @@ const dummyData = [
     },
   ];
 
-  export default dummyData;
+  export default dataToko;

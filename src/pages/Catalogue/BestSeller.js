@@ -11,7 +11,7 @@ import {
 import { Card, Gap, SearchBar } from '../../components';
 import dataProduk from '../../components/data/dataProduk';
 
-const Produk = ({ navigation }) => {
+const BestSeller = ({ navigation }) => {
   const renderItem = ({item}) => (
     <Card
       namaProduk={item.name}
@@ -29,14 +29,6 @@ const Produk = ({ navigation }) => {
   );
   return (
     <View style={styles.page}>
-      <View style={{paddingHorizontal: 20}} >
-        <Text style={styles.textStyle} >
-          Ayo eksplorasi
-        </Text>
-        <Gap height={10}/>
-        <SearchBar />
-        <Gap height={20}/>
-      </View>
       <FlatList
         columnWrapperStyle={{justifyContent: 'space-between', flex: 0.5}}
         data={dataProduk}
@@ -48,14 +40,13 @@ const Produk = ({ navigation }) => {
   );
 };
 
-export default Produk;
+export default BestSeller;
 
 const styles = StyleSheet.create({
   page: {
     flex: 1,
     paddingTop: 15,
     backgroundColor: colors.white
-    // paddingHorizontal: 5
   },
   textStyle: {
     fontFamily: 'poppins',

@@ -9,7 +9,7 @@ import {
   colors,
 } from '../../assets';
 import { Gap, SearchBar } from '../../components';
-import dummyData from './dummyData';
+import dataToko from '../../components/data/dataToko';
 import Toko from './Toko';
 
 const TokoPage = ({onPress, navigation}) => {
@@ -20,7 +20,10 @@ const TokoPage = ({onPress, navigation}) => {
       rating={item.rating}
       location={item.location}
       image={item.image}
-      onPress={() => navigation.navigate('ShopDetail')}
+      onPress={() => navigation.navigate('Catalogue', {
+        item: item
+        }
+      )}
     />
   );
   return (
@@ -34,7 +37,7 @@ const TokoPage = ({onPress, navigation}) => {
         <Gap height={20}/>
       </View>
       <FlatList
-        data={dummyData}
+        data={dataToko}
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />

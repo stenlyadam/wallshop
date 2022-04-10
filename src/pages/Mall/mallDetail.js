@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { fonts, colors } from '../../assets';
 import {SearchBar, Gap, Button} from '../../components';
-import dummyData from '../Shop/dummyData';
+import dataToko from '../../components/data/dataToko';
 import Toko from '../Shop/Toko';
 
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
@@ -18,7 +18,7 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 const Tab = createMaterialTopTabNavigator();
 
 const mallToko = ({navigation}) => {
-  return dummyData.map((item) => {
+  return dataToko.map((item) => {
     return (
       <View>
         <Toko
@@ -27,7 +27,10 @@ const mallToko = ({navigation}) => {
           rating={item.rating}
           location={item.location}
           image={item.image}
-          onPress={() => navigation.navigate("ShopDetail")}
+          onPress={() => navigation.navigate("Catalogue", {
+            item: item
+          })
+        }
         />
       </View>
     );

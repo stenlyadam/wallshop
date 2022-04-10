@@ -47,8 +47,10 @@ import IMGLaptopROG from './img-laptop-rog.png';
 import IMGNikeAir from './img-nike-air-versitile-II.png';
 import IMGSupremeCashGun from './img-supreme-cash-gun.png';
 import IMGMantos from './img-mantos.png';
+import IMGDummyPromo from './img-dummy-promo.png';
 
 export {
+  IMGDummyPromo,
   IMGMantos,
   IMGGramediaFeed,
   IMGGramediaFollowing,

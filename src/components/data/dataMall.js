@@ -1,4 +1,4 @@
-const DATA = [
+const dataMall = [
     {
       id: 1,
       name: "Manado Town Square",
@@ -73,4 +73,4 @@ const DATA = [
     },
   ];
 
-  export default DATA;
+  export default dataMall;

@@ -2,7 +2,7 @@ import React from "react";
 import { FlatList, StyleSheet, SafeAreaView, View, Text } from "react-native";
 import { colors } from "../../assets";
 import { SearchBar, Gap } from "../../components";
-import DATA from "./DATA";
+import dataMall from "../../components/data/dataMall";
 import Mall from "./Mall";
 
 const MallPage = ({ navigation }) => {
@@ -31,7 +31,7 @@ const MallPage = ({ navigation }) => {
         <Gap height={20}/>
       </View>
       <FlatList
-        data={DATA}
+        data={dataMall}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />

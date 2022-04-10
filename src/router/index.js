@@ -21,7 +21,7 @@ import {
   IconHome,
   IconNotification,
 } from '../assets';
-import ShopDetail from '../pages/Shop/ShopDetail';
+import Catalogue from '../pages/Catalogue';
 import mallDetail from '../pages/Mall/mallDetail';
 
 const Tab = createBottomTabNavigator();
@@ -104,6 +104,11 @@ const Router = () => {
   return (
     <Stack.Navigator initialRouteName="BottomNavigator">
       <Stack.Screen
+        name="Explore"
+        component={Explore}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
         name="Login"
         component={Login}
         options={{headerShown: false}}
@@ -124,18 +129,13 @@ const Router = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="Explore"
-        component={Explore}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
         name="Notification"
         component={Notification}
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="ShopDetail"
-        component={ShopDetail}
+        name="Catalogue"
+        component={Catalogue}
         options={{headerShown: false}}
       />
       <Stack.Screen
