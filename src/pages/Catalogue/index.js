@@ -16,10 +16,10 @@ import { Button, Gap } from "../../components";
 import TopTab from "../../components/molecules/TopTab";
 
 import BestSeller from "./BestSeller";
-import Kategori from "./Kategori";
+import Kategori from "../Kategori";
+import Promo from "./Promo";
 
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import Promo from "./Promo";
 
 const Tab = createMaterialTopTabNavigator();
 

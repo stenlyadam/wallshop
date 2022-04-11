@@ -23,7 +23,7 @@ import {
 } from '../assets';
 import Catalogue from '../pages/Catalogue';
 import mallDetail from '../pages/Mall/mallDetail';
-import Details from '../pages/Catalogue/Kategori/Details';
+import Details from '../pages/Kategori/Details';
 
 const Tab = createBottomTabNavigator();
 

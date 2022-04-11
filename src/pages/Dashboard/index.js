@@ -110,25 +110,25 @@ const Dashboard = ({navigation}) => {
               type="square"
               image={IMGFashionPria}
               title="Fashion Pria"
-              onClick={() => navigation.navigate('Product')}
+              onClick={() => navigation.navigate('Details')}
             />
             <RoundButton
               type="square"
               image={IMGFashionWanita}
               title="Fashion Wanita"
-              onClick={() => navigation.navigate('Product')}
+              onClick={() => navigation.navigate('Details')}
             />
             <RoundButton
               type="square"
               image={IMGSouvenir}
               title="Souvenir"
-              onClick={() => navigation.navigate('Product')}
+              onClick={() => navigation.navigate('Details')}
             />
             <RoundButton
               type="square"
               image={IMGOlahraga}
               title="Olahraga "
-              onClick={() => navigation.navigate('Product')}
+              onClick={() => navigation.navigate('Details')}
             />
           </View>
           <View style={styles.lineCategoryContainer}>
@@ -136,25 +136,25 @@ const Dashboard = ({navigation}) => {
               type="square"
               image={IMGMakanan}
               title="Makanan"
-              onClick={() => navigation.navigate('Product')}
+              onClick={() => navigation.navigate('Details')}
             />
             <RoundButton
               type="square"
               image={IMGGadget}
               title="Gadget"
-              onClick={() => navigation.navigate('Product')}
+              onClick={() => navigation.navigate('Details')}
             />
             <RoundButton
               type="square"
               image={IMGOtomotif}
               title="Otomotif"
-              onClick={() => navigation.navigate('Product')}
+              onClick={() => navigation.navigate('Details')}
             />
             <RoundButton
               type="square"
               image={IMGBuku}
               title="Buku"
-              onClick={() => navigation.navigate('Product')}
+              onClick={() => navigation.navigate('Details')}
             />
           </View>
           <View style={styles.lineCategoryContainer}>
@@ -162,25 +162,25 @@ const Dashboard = ({navigation}) => {
               type="square"
               image={IMGKesehatan}
               title="Kesehatan"
-              onClick={() => navigation.navigate('Product')}
+              onClick={() => navigation.navigate('Details')}
             />
             <RoundButton
               type="square"
               image={IMGFurniture}
               title="Furniture"
-              onClick={() => navigation.navigate('Product')}
+              onClick={() => navigation.navigate('Details')}
             />
             <RoundButton
               type="square"
               image={IMGMainan}
               title="Mainan"
-              onClick={() => navigation.navigate('Product')}
+              onClick={() => navigation.navigate('Details')}
             />
             <RoundButton
               type="square"
               image={IMGPeliharaan}
               title="Peliharaan"
-              onClick={() => navigation.navigate('Product')}
+              onClick={() => navigation.navigate('Details')}
             />
           </View>
         </View>

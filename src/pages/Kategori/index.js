@@ -7,9 +7,9 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
-import { colors } from "../../../assets";
-import { Button } from '../../../components';
-import dataKategori from '../../../components/data/dataKategori';
+import { colors } from "../../assets";
+import { Button } from '../../components';
+import dataKategori from '../../components/data/dataKategori';
 
 const Kategori = ({ navigation }) => {
   const renderItem = ({ item }) => (

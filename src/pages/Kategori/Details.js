@@ -1,9 +1,9 @@
 import React from 'react'
 import { StyleSheet, View, FlatList } from 'react-native'
-import { Card, Gap, SearchBar } from '../../../components'
-import TopTab from '../../../components/molecules/TopTab'
-import dataProduk from '../../../components/data/dataProduk'
-import { colors } from '../../../assets'
+import { Card, Gap, SearchBar } from '../../components'
+import TopTab from '../../components/molecules/TopTab'
+import dataProduk from '../../components/data/dataProduk'
+import { colors } from '../../assets'
 
 const Details = ({ navigation }) => {
   const renderItem = ({ item }) => (
@@ -24,14 +24,13 @@ const Details = ({ navigation }) => {
   );
   return (
     <View style={styles.page}>
-      <TopTab title="Kategori" />
+      <TopTab title="Kategori" onBack={() => navigation.goBack()} />
       <View style={styles.container}>
-        <View style={styles.header} >
-          <SearchBar />
-        </View>
+        <SearchBar />
         <FlatList
-          columnWrapperStyle={{ justifyContent: "space-between", flex: 0.5 }}
-          showsHorizontalScrollIndicator= {false}
+          columnWrapperStyle={{ justifyContent: "space-around", flex: 0.5 }}
+          style={{paddingHorizontal: 10, marginTop: 10}}
+          showsHorizontalScrollIndicator={false}
           data={dataProduk}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
@@ -51,10 +50,5 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    paddingHorizontal: 10,
-    paddingBottom: 50
   },
-  header: {
-    paddingBottom: 10
-  }
 })
