@@ -23,6 +23,7 @@ import {
 } from '../assets';
 import Catalogue from '../pages/Catalogue';
 import mallDetail from '../pages/Mall/mallDetail';
+import Details from '../pages/Catalogue/Kategori/Details';
 
 const Tab = createBottomTabNavigator();
 
@@ -151,6 +152,11 @@ const Router = () => {
       <Stack.Screen
         name="mallDetail"
         component={mallDetail}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Details"
+        component={Details}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
