@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import { colors, fonts } from "../../assets";
 import TokoPage from "../Shop/TokoPage";
-import Produk from "../Shop/Produk";
+import Product from "../Product";
 import Mall from "../Mall/index";
 
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
@@ -35,7 +35,7 @@ const TabNavigator = ({ navigation }) => {
         />
         <Tab.Screen
           name="Produk"
-          component={Produk}
+          component={Product}
           navigation={navigation}
         />
         <Tab.Screen
