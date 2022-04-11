@@ -27,11 +27,19 @@ import {
   IconShoppingCart,
   IconLoveSmall,
   IconThreeDots,
+  IconArrowRight
 } from '../../../assets';
 import {colors} from '../../../assets';
 
 const IconOnly = ({icon, onPress, width, height, color = colors.white}) => {
   const Icon = () => {
+    if (icon === 'icon-arrow-right') {
+      return (
+        <View style={styles.iconContainer(width, height)}>
+          <IconArrowRight />
+        </View>
+      );
+    }
     if (icon === 'icon-profile') {
       return (
         <View style={styles.iconContainer(width, height)}>

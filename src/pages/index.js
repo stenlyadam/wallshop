@@ -7,6 +7,7 @@ import Following from './Following';
 import Notification from './Notification';
 import Product from './Product';
 import Leaderboard from './Leaderboard';
+import Catalogue from './Catalogue';
 
 export {
   Signup,
@@ -18,4 +19,5 @@ export {
   Following,
   Notification,
   Product,
+  Catalogue
 };

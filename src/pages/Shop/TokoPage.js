@@ -9,66 +9,8 @@ import {
   colors,
 } from '../../assets';
 import { Gap, SearchBar } from '../../components';
+import dataToko from '../../components/data/dataToko';
 import Toko from './Toko';
-
-const DATA = [
-  {
-    id: 1,
-    name: 'Ace Hardware Mantos',
-    description: 'Toko perlengkapan rumah',
-    rating: '4.9',
-    location: 'Mantos, Kota Manado',
-    image: require('../../assets/images/img-ace-hardware.png'),
-  },
-  {
-    id: 2,
-    name: 'Gramedia',
-    description: 'Buku dan perlengkapan belajar',
-    rating: '5.0',
-    location: 'Mantos, Kota Manado',
-    image: require('../../assets/images/img-gramedia.png'),
-  },
-  {
-    id: 3,
-    name: '3Second',
-    description: 'Fashion & Clothing',
-    rating: '4.8',
-    location: 'Mantos, Kota Manado',
-    image: require('../../assets/images/img-3second.png'),
-  },
-  {
-    id: 4,
-    name: 'Sport Station',
-    description: 'Fashion & Sport',
-    rating: '4.9',
-    location: 'MTC, Kota Manado',
-    image: require('../../assets/images/img-sport-station.png'),
-  },
-  {
-    id: 5,
-    name: 'Miens Souvenir Tikala',
-    description: 'Toko oleh - oleh souvenir',
-    rating: '4.7',
-    location: 'Tikala, Kota Manado',
-    image: require('../../assets/images/img-miens-souvenir-tikala.png'),
-  },
-  {
-    id: 6,
-    name: 'Maskut Sport',
-    description: 'Perlengkapan olahraga basket',
-    rating: '4.8',
-    location: 'MTC, Kota Manado',
-    image: require('../../assets/images/img-maskut-sport.png'),
-  },
-  {
-    id: 7,
-    name: 'Maskut Sport',
-    description: 'Perlengkapan olahraga basket',
-    rating: '4.8',
-    location: 'MTC, Kota Manado',
-    image: require('../../assets/images/img-maskut-sport.png'),
-  },
-];
 
 const TokoPage = ({onPress, navigation}) => {
   const renderItem = ({item}) => (
@@ -78,7 +20,10 @@ const TokoPage = ({onPress, navigation}) => {
       rating={item.rating}
       location={item.location}
       image={item.image}
-      onPress={() => navigation.navigate('ShopDetail')}
+      onPress={() => navigation.navigate('Catalogue', {
+        item: item
+        }
+      )}
     />
   );
   return (
@@ -92,7 +37,7 @@ const TokoPage = ({onPress, navigation}) => {
         <Gap height={20}/>
       </View>
       <FlatList
-        data={DATA}
+        data={dataToko}
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />

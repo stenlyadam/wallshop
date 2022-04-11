@@ -2,82 +2,8 @@ import React from "react";
 import { FlatList, StyleSheet, SafeAreaView, View, Text } from "react-native";
 import { colors } from "../../assets";
 import { SearchBar, Gap } from "../../components";
+import dataMall from "../../components/data/dataMall";
 import Mall from "./Mall";
-
-const DATA = [
-  {
-    id: 1,
-    name: "Manado Town Square",
-    location: "Manado",
-    time: '17',
-    range: '2',
-    image: require("../../assets/images/img-shop-logo.png"),
-  },
-  {
-    id: 2,
-    name: "Megamall",
-    location: "Manado",
-    time: '17',
-    range: '2',
-    image: require("../../assets/images/img-shop-logo.png"),
-  },
-  {
-    id: 3,
-    name: "Manado Trade Center",
-    location: "Manado",
-    time: '17',
-    range: '2',
-    image: require("../../assets/images/img-shop-logo.png"),
-  },
-  {
-    id: 4,
-    name: "IT Center Manado",
-    location: "Manado",
-    time: '17',
-    range: '2',
-    image: require("../../assets/images/img-shop-logo.png"),
-  },
-  {
-    id: 5,
-    name: "Lippo Plaza",
-    location: "Manado",
-    time: '17',
-    range: '2',
-    image: require("../../assets/images/img-shop-logo.png"),
-  },
-  {
-    id: 6,
-    name: "Marina Shoping Walk",
-    location: "Manado",
-    time: '17',
-    range: '2',
-    image: require("../../assets/images/img-shop-logo.png"),
-  },
-  {
-    id: 7,
-    name: "Manado Town Square",
-    location: "Manado",
-    time: '17',
-    range: '2',
-    image: require("../../assets/images/img-shop-logo.png"),
-  },
-  {
-    id: 8,
-    name: "Manado Town Square",
-    location: "Manado",
-    time: '17',
-    range: '2',
-    image: require("../../assets/images/img-ace-hardware.png"),
-  },
-  {
-    id: 9,
-    name: "Manado Town Square",
-    location: "Manado",
-    time: '17',
-    range: '2',
-    image: require("../../assets/images/img-ace-hardware.png"),
-  },
-];
 
 const MallPage = ({ navigation }) => {
   const renderItem = ({ item }) => (
@@ -87,7 +13,11 @@ const MallPage = ({ navigation }) => {
       time={item.time}
       range={item.range}
       image={item.image}
-      onPress={() => navigation.navigate("mallDetail")}
+      onPress={() =>
+        navigation.navigate("mallDetail", {
+          item: item
+        })
+      }
     />
   );
   return (
@@ -101,7 +31,7 @@ const MallPage = ({ navigation }) => {
         <Gap height={20}/>
       </View>
       <FlatList
-        data={DATA}
+        data={dataMall}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />
